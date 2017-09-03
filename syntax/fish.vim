@@ -13,12 +13,13 @@ syntax keyword fishKeyword contained
             \ N_ prevd-or-backward-word prompt_pwd seq setenv sgrep up-or-search
 syntax keyword fishKeyword contained
             \ abbr alias begin bg bind block break breakpoint builtin cd
-            \ commandline complete \contains continue count dirh dirs echo emit
-            \ end eval exec exit fg fish fish_config fish_indent fish_pager
-            \ fish_prompt fish_right_prompt fish_update_completions fishd funced
-            \ funcsave function functions help history isatty jobs math mimedb
-            \ nextd not open popd prevd psub pushd pwd random read return
-            \ set_color source status trap type ulimit umask vared
+            \ commandline complete \contains continue count dirh dirs disown echo emit
+            \ end eval exec exit fg fish fish_config fish_indent fish_key_reader
+            \ fish_mode_prompt fish_prompt fish_right_prompt fish_update_completions
+			\ fish_vi_mode funced
+            \ funcsave function functions help history isatty jobs math
+            \ nextd not open popd prevd printf psub pushd pwd random read realpath return
+            \ \set set_color source status string suspend trap type ulimit umask vared
 syntax keyword fishKeyword command contained nextgroup=@fishCommand skipwhite
 syn match fishKeyword "\.\ze\%(\s\|$\)" contained
 syn cluster fishCommand add=fishKeyword
